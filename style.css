@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-shadow: border-box;
+}
+
+ul {
+	list-style: none;
+
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    background: #333;
+    color: #fff;
+}
+
+.grid{
+	display: grid;
+}
+
+.grid--1x2 {
+	grid-template-columns: repeat(2, minmax(auto, 1fr));
+}
+
+.grid--1x3 {
+	grid-template-columns: repeat(3, minmax(auto, 1fr));
+}
+
+.btn {
+	display: inline-block;
+	border: 0;
+	background: 0;
+	padding: 1em 1.5em;
+	font-size: 1.125rem;
+	font-weight: 700;
+	transition: 250ms;
+    color: #fff;
+    background: rgb(41, 122, 41);
+    border-radius: 10px;
+    max-width: 350px;
+
+    .fa-bolt-lightning{
+        color: inherit;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background: rgb(34, 100, 34);
+    }
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2.5rem;
+}
+
+.flow-content--s > * + *  {
+	margin-top: .5rem !important;
+}
+.flow-content--m > * + *  {
+	margin-top: 1rem !important;
+}
+.flow-content--xm > * + *  {
+	margin-top: 1.5rem !important;
+}
+.flow-content--l > * + *  {
+	margin-top: 3rem !important;
+}
+.flow-content--xl > * + *  {
+	margin-top: 3.5rem !important;
+}
+
+.title{
+    font-size: 3rem;
+}
+
+.special{
+    color: rgb(41, 122, 41);
+
+    &::after{
+        content: '';
+        display: block;
+        max-width: 497px;
+        height: 5px;
+        background: rgb(41, 122, 41);
+        margin-bottom: 1.5rem;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    input {
+        max-width: 500px;
+        width: 100%;
+        border: 0;
+        background: transparent;
+        font-size: inherit;
+
+        &:focus{
+            outline: 0;
+        }
+    }
+    .fa-clipboard {
+        color: gray;
+        size: inherit;
+        transition: 250ms color;
+        &:hover{
+            cursor: pointer;
+            color: #000;.
+        }
+    }
+    .input-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        min-width: 500px;
+        width: fit-content;
+        padding: .5em;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 37.5em) {
+    html {
+        font-size: .8rem;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .form {
+        align-items: center;
+        .input-wrapper {
+            min-width: unset;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 25em) {
+    html{
+        font-size: .6rem;
+    }
+}
