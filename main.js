@@ -6,7 +6,7 @@ const form = document.querySelector("form");
 
 let h = new Headers();
 h.append("X-Api-Key", "g0wR/+aHm2k3eZI9FV66rQ==j7V29U1lo2mGZNRq");
-let req = new Request(`${apiURL}` + 32, {
+let req = new Request(`${apiURL}` + 16, {
   method: "GET",
   headers: h,
   mode: "cors",
